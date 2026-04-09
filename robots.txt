@@ -1,0 +1,15 @@
+# robots.txt — ventes-ia.fr
+User-agent: *
+Allow: /
+
+# LLM crawlers (AEO/GEO) — explicitement autorisés
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://ventes-ia.fr/sitemap.xml

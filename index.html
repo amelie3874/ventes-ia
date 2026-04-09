@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventes-IA — La newsletter pour mieux vendre avec l'IA, sans perdre l'humain</title>
+    <meta name="description" content="La première newsletter française entièrement dédiée à l'IA appliquée aux ventes. Chaque mardi, 5 minutes pour transformer le bruit IA en décisions concrètes pour votre fonction commerciale.">
+    <meta name="author" content="Amélie Marrone">
+    <meta name="theme-color" content="#0f0f11">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ventes-ia.fr/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Ventes-IA — La newsletter pour mieux vendre avec l'IA, sans perdre l'humain">
+    <meta property="og:description" content="La première newsletter française entièrement dédiée à l'IA appliquée aux ventes. Chaque mardi, 5 minutes pour transformer le bruit IA en décisions concrètes pour votre fonction commerciale.">
+    <meta property="og:url" content="https://ventes-ia.fr/">
+    <meta property="og:site_name" content="Ventes-IA">
+    <meta property="og:image" content="https://ventes-ia.fr/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Mieux vendre avec l'IA. Sans perdre l'humain. — Newsletter Ventes-IA">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ventes-IA — La newsletter pour mieux vendre avec l'IA, sans perdre l'humain">
+    <meta name="twitter:description" content="La première newsletter française entièrement dédiée à l'IA appliquée aux ventes.">
+    <meta name="twitter:image" content="https://ventes-ia.fr/og-image.png">
+
+    <!-- Fonts preconnect and preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" fetchpriority="high">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300,0..1&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD AEO / GEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://ventes-ia.fr/#website",
+          "url": "https://ventes-ia.fr/",
+          "name": "Ventes-IA"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://ventes-ia.fr/#organization",
+          "name": "Ventes-IA",
+          "url": "https://ventes-ia.fr/",
+          "founder": {
+            "@id": "https://ventes-ia.fr/#person"
+          },
+          "sameAs": [
+            "https://linkedin.com/in/ameliemarrone",
+            "https://envolia.fr"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://ventes-ia.fr/#person",
+          "name": "Amélie Marrone",
+          "jobTitle": "Fondatrice",
+          "worksFor": {
+            "@id": "https://ventes-ia.fr/#organization"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "INP Grenoble"
+          },
+          "knowsAbout": ["Vente B2B", "IA générative appliquée aux ventes", "Sales enablement", "Adoption d'outils IA", "CRM"]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ventes-ia.fr/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "C'est gratuit ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, intégralement."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "À quelle fréquence ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Un email par semaine, le mardi matin."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "À qui ça s'adresse ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dirigeants, directeurs commerciaux, commerciaux, entrepreneurs. Toute personne qui est concernée par la vente de produits ou de services."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Et si ce n'est pas pour moi ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Désinscription en un clic, sans formulaire, sans question."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://ventes-ia.fr/#service",
+          "serviceType": "Newsletter",
+          "provider": {
+            "@id": "https://ventes-ia.fr/#organization"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* CSS Variables & Design System */
+        :root {
+            /* Colors */
+            --primary: #f9a500;
+            --primary-glow: rgba(249, 165, 0, 0.3);
+            --primary-soft: rgba(249, 165, 0, 0.1);
+            --on-primary: #1a1c19;
+            --background: #fafaf9;
+            --surface: #ffffff;
+            --surface-container: #f1f1ee;
+            --surface-container-low: #fafaf9;
+            --surface-container-high: #e8e8e5;
+            --on-surface: #1a1c19;
+            --on-surface-variant: #444440;
+            --outline: #d1d1cf;
+            --navy: #0f0f11;
+            --charcoal: #1c1c1e;
+            --white: #ffffff;
+            
+            /* Typography */
+            --font-display: 'Bricolage Grotesque', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 6rem;
+            --space-xxl: 10rem;
+            
+            /* Shadows */
+            --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+            --shadow-card: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+            --shadow-premium: 0 30px 60px -12px rgba(0, 0, 0, 0.15);
+            
+            /* Border Radius */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1.25rem;
+            --radius-full: 9999px;
+        }
+
+        /* Reset & Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--on-surface);
+            background-color: var(--surface-container-low);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-variant-numeric: tabular-nums proportional-nums;
+            font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, .font-display {
+            font-family: var(--font-display);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        /* Specific classes for typographic scale */
+        .text-hero {
+            font-size: clamp(3.5rem, 8vw, 8rem);
+            letter-spacing: -0.03em;
+        }
+        
+        .text-huge {
+            font-size: clamp(4rem, 15vw, 12rem);
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+        }
+        
+        .text-h2 {
+            font-size: clamp(2.5rem, 5vw, 5rem);
+        }
+        
+        .text-h3 {
+            font-size: clamp(2rem, 3.5vw, 3.5rem);
+        }
+
+        .text-h4 {
+            font-size: clamp(1.5rem, 2vw, 2rem);
+            font-family: var(--font-body);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .text-body-lg {
+            font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+            color: var(--on-surface-variant);
+        }
+
+        .text-caption {
+            font-size: 0.6875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-weight: 800;
+        }
+
+        /* No Italics globally as requested, except where specifically defined */
+        i, em { font-style: normal; }
+
+        /* Structural Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-padding { padding: var(--space-xxl) 0; }
+        .grid-2 { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); }
+        .grid-3 { display: grid; grid-template-columns: 1fr; gap: var(--space-md); }
+        
+        @media (min-width: 840px) {
+            .grid-2 { grid-template-columns: 1fr 1fr; }
+            .grid-3 { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+        }
+
+        /* Accessibility & Focus States */
+        .sr-only {
+            position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+            overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; white-space: nowrap;
+        }
+        
+        .skip-link {
+            position: absolute; background: var(--primary); color: var(--navy);
+            padding: 0.5rem 1rem; font-weight: bold; transform: translateY(-100%);
+            z-index: 100; transition: transform 0.3s;
+        }
+        
+        .skip-link:focus { transform: translateY(0); }
+        
+        :focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 4px;
+            border-radius: var(--radius-sm);
+        }
+
+        /* Component Styles */
+        /* Nav */
+        .nav-bar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(209, 209, 207, 0.2);
+        }
+        
+        .nav-content {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.25rem 1.5rem; max-width: 1200px; margin: 0 auto;
+        }
+        
+        .nav-logo {
+            font-family: var(--font-display); font-size: 1.5rem;
+            color: var(--on-surface); text-decoration: none;
+        }
+        
+        .nav-links { display: none; gap: 2.5rem; align-items: center; }
+        @media (min-width: 840px) { .nav-links { display: flex; } }
+        
+        .nav-link {
+            color: var(--on-surface-variant); text-decoration: none;
+            font-size: 0.625rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.25em; transition: color 0.3s;
+        }
+        .nav-link:hover { color: var(--primary); }
+        
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            background: var(--primary); color: var(--navy); border: none;
+            padding: 0.75rem 1.5rem; border-radius: var(--radius-sm); cursor: pointer;
+            font-size: 0.625rem; font-weight: 900; text-transform: uppercase;
+            letter-spacing: 0.2em; text-decoration: none; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-soft);
+        }
+        .btn:hover { background: var(--navy); color: var(--white); box-shadow: var(--shadow-card); }
+        .btn-large { padding: 1.25rem 2.5rem; font-size: 0.75rem; }
+
+        /* Hero */
+        .hero {
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 12rem 0 8rem;
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+        }
+        .hero-pattern {
+            position: absolute; inset: 0; pointer-events: none; opacity: 0.2;
+            background-image: radial-gradient(var(--primary) 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            mask-image: linear-gradient(to bottom, black, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+        }
+        .tag {
+            display: inline-block; padding: 0.5rem 1.25rem; background: var(--primary);
+            color: var(--navy); border-radius: var(--radius-full); font-weight: 900;
+            font-size: 0.875rem; letter-spacing: 0.3em; text-transform: uppercase;
+            border: 2px solid var(--primary); box-shadow: 0 10px 30px var(--primary-glow);
+            margin-bottom: 3rem;
+        }
+        .hero-title i { font-style: normal; color: var(--primary); }
+        .hero-desc {
+            font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 500;
+            color: rgba(255, 255, 255, 0.7); max-width: 800px; margin: 0 auto 4rem;
+        }
+        .form-inline {
+            display: flex; flex-direction: column; gap: 0.5rem;
+            max-width: 600px; margin: 0 auto; background: rgba(255, 255, 255, 0.05);
+            padding: 0.5rem; border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        @media (min-width: 640px) { .form-inline { flex-direction: row; } }
+        
+        .input-base {
+            flex-grow: 1; padding: 1.25rem 2rem;
+            background: rgba(255, 255, 255, 0.1); border: 1px solid transparent;
+            color: var(--white); font-size: 1.125rem; border-radius: var(--radius-sm);
+            font-family: var(--font-body); outline: none; transition: border-color 0.3s;
+        }
+        .input-base::placeholder { color: rgba(255, 255, 255, 0.4); }
+        .input-base:focus { border-color: var(--primary); }
+
+        /* Utilities */
+        .color-primary { color: var(--primary); }
+        .color-navy { color: var(--navy); }
+        .color-white { color: var(--white); }
+        .bg-white { background-color: var(--white); }
+        .bg-navy { background-color: var(--navy); }
+        .bg-charcoal { background-color: var(--charcoal); }
+        .bg-surface { background-color: var(--surface-container); }
+        .text-center { text-align: center; }
+        .flex { display: flex; }
+        .items-center { align-items: center; }
+        .baseline { align-items: baseline; }
+        .gap-sm { gap: 1rem; }
+        .gap-md { gap: 2rem; }
+        .gap-lg { gap: 3rem; }
+        .mb-sm { margin-bottom: 1rem; }
+        .mb-md { margin-bottom: 2rem; }
+        .mb-lg { margin-bottom: 4rem; }
+        .divider {
+            height: 1px; max-width: 80%; margin: var(--space-xxl) auto;
+            background: linear-gradient(to right, transparent, var(--outline), transparent);
+        }
+        abbr { text-decoration: none; border-bottom: 1px dotted var(--outline); cursor: help; }
+
+        /* Cards & Special Sections */
+        .stat-box { margin-bottom: 3rem; }
+        
+        .rubrique-card {
+            background: var(--white); padding: 2.5rem; border-radius: var(--radius-md);
+            box-shadow: var(--shadow-card); display: flex; flex-direction: column;
+            border: 1px solid rgba(209, 209, 207, 0.3); transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .rubrique-card:hover { transform: translateY(-8px); }
+        
+        .icon-circle {
+            width: 4rem; height: 4rem; border-radius: 50%;
+            background: var(--primary-soft); display: flex; align-items: center; justify-content: center;
+            margin-bottom: 2rem; color: var(--primary);
+        }
+
+        .rubrique-list { list-style: none; margin-top: 2rem; margin-bottom: auto; }
+        .rubrique-list li { margin-bottom: 2rem; }
+        .rubrique-list h4 { font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+        .rubrique-list h4::before { content: ""; display: block; width: 0.5rem; height: 0.5rem; background: var(--primary); border-radius: 50%; }
+        
+        .source-link {
+            font-size: 0.6875rem; text-transform: uppercase; font-weight: 900;
+            letter-spacing: 0.3em; opacity: 0.4; border-left: 2px solid var(--primary); padding-left: 1rem;
+        }
+
+        /* Callout Box */
+        .callout {
+            background: var(--surface-container-high); padding: 3rem;
+            border-radius: var(--radius-lg); border: 2px solid var(--navy);
+        }
+
+        /* Image Grayscale */
+        .img-grayscale {
+            aspect-ratio: 1/1; background: var(--surface-container-high); border-radius: 50%;
+            box-shadow: var(--shadow-premium); overflow: hidden; position: relative;
+            width: 180px; max-width: 100%; margin: 1rem 0 2rem;
+        }
+        .img-grayscale img {
+            width: 100%; height: 100%; object-fit: cover; display: block;
+            filter: grayscale(100%) contrast(1.05);
+            transition: filter 0.4s ease;
+        }
+        .img-grayscale:hover img { filter: grayscale(0%) contrast(1); }
+
+        /* FAQ Details */
+        details {
+            background: var(--white); padding: 2rem 2.5rem; border-radius: var(--radius-sm);
+            border: 1px solid rgba(209, 209, 207, 0.3); margin-bottom: 1rem;
+        }
+        summary {
+            font-size: 1.25rem; font-weight: 900; color: var(--primary);
+            cursor: pointer; list-style: none; outline: none; position: relative; padding-right: 2rem;
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 2rem; font-family: var(--font-display); color: var(--navy);
+        }
+        details[open] summary::after { content: "-"; }
+        details p { margin-top: 1.5rem; font-size: 1.125rem; font-weight: 500; color: var(--on-surface-variant); }
+        
+        /* Footer */
+        .footer { background: var(--navy); padding: 6rem 0; color: rgba(255, 255, 255, 0.4); }
+        .footer-a { color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s; }
+        .footer-a:hover { color: var(--primary); }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- 1. Nav -->
+    <header role="banner" class="nav-bar">
+        <nav aria-label="Navigation principale" class="nav-content">
+            <a href="/" class="nav-logo" aria-label="Ventes-IA - Retour à l'accueil" style="font-family: var(--font-body); font-weight: 800; letter-spacing: -0.02em;">Ventes-IA</a>
+            <div class="nav-links">
+                <a href="#newsletter" class="nav-link">La newsletter</a>
+                <a href="#qui-ecrit" class="nav-link">Qui écrit</a>
+                <a href="#sinscrire" class="nav-link">S'inscrire</a>
+            </div>
+            <a href="#sinscrire" class="btn">S'abonner gratuitement</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- 2. Hero -->
+        <section aria-labelledby="hero-title" id="newsletter" class="hero">
+            <div class="hero-pattern" aria-hidden="true"></div>
+            <div class="container" style="position: relative; z-index: 10;">
+                <span class="tag">La première newsletter française entièrement dédiée à l'IA appliquée aux ventes</span>
+                <h1 id="hero-title" class="text-hero hero-title mb-md">
+                    Mieux vendre avec l'<abbr title="Intelligence Artificielle">IA</abbr>.<br>
+                    <i>Sans perdre l'humain.</i>
+                </h1>
+                <p class="hero-desc">
+                    Chaque mardi, 5 minutes pour transformer le bruit <abbr title="Intelligence Artificielle">IA</abbr> en décisions concrètes pour votre fonction commerciale.<br>
+                    Sans jargon, sans buzz, et sans déshumaniser la relation client.
+                </p>
+                <div id="sinscrire">
+                    <div style="display:flex; justify-content:center;">
+                        <button type="button" class="btn btn-large js-open-tally">Recevoir la prochaine édition</button>
+                    </div>
+                    <p class="text-caption mt-6" style="margin-top: 1.5rem; opacity: 0.4;">Gratuit. Un email par semaine. Désinscription en un clic.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Section Constat -->
+        <section aria-labelledby="constat-title" class="bg-white section-padding">
+            <div class="container" style="max-width: 900px;">
+                <h2 id="constat-title" class="text-h2 mb-md color-charcoal">
+                    Vos commerciaux utilisent déjà l'<abbr title="Intelligence Artificielle">IA</abbr>. <span class="color-primary">Vos clients aussi.</span>
+                </h2>
+                
+                <div class="flex baseline gap-md mb-md stat-box">
+                    <div class="text-huge color-primary font-display">75%</div>
+                    <p class="text-h3" style="font-family: var(--font-body); font-weight: 700; max-width: 600px;">
+                        des employés de bureau utilisent l'<abbr title="Intelligence Artificielle">IA</abbr> au travail — la plupart avec leurs propres outils, hors de tout contrôle.
+                    </p>
+                </div>
+                
+                <p class="text-body-lg mb-md">
+                    Vos commerciaux écrivent leurs mails, préparent leurs appels, rédigent leurs comptes-rendus avec ChatGPT. Vos données clients, votre savoir-faire, votre image de marque partent dans des systèmes que vous ne maîtrisez pas.
+                </p>
+                <p class="source-link">Source : Microsoft & LinkedIn 2024 Work Trend Index</p>
+
+                <div class="divider"></div>
+
+                <div class="grid-2 items-center">
+                    <div>
+                        <h3 class="text-h3 mb-sm">Et de l'autre côté du téléphone, c'est exactement la même chose.</h3>
+                        <p class="text-body-lg mb-sm">
+                            Vos prospects arrivent en rendez-vous après avoir comparé vos offres avec une <abbr title="Intelligence Artificielle">IA</abbr>. Ils ont préparé leurs objections avec une <abbr title="Intelligence Artificielle">IA</abbr>. Ils ont demandé à une <abbr title="Intelligence Artificielle">IA</abbr> si votre prix était dans le marché.
+                        </p>
+                        <p class="text-h4" style="color: var(--on-surface);">
+                            Le commercial qui n'utilise pas l'<abbr title="Intelligence Artificielle">IA</abbr> n'est plus en retard sur son outil. Il est en retard sur son acheteur.
+                        </p>
+                    </div>
+                    <div class="callout">
+                        <p class="text-h3 color-navy mb-md">
+                            Vous ne pouvez plus dire « on n'a pas commencé ». Vous pouvez encore décider comment vous y allez.
+                        </p>
+                        <div class="flex items-center gap-sm color-primary">
+                            <span class="material-symbols-outlined" style="font-size: 2.5rem;" aria-hidden="true">trending_up</span>
+                            <span class="text-caption">Reprenez l'avantage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Section Problem -->
+        <section aria-labelledby="problem-title" class="bg-navy section-padding color-white" style="position: relative; overflow: hidden;">
+            <div style="position: absolute; right: 0; top: 0; bottom: 0; width: 33%; background: var(--primary-soft); transform: skewX(-12deg); pointer-events: none;" aria-hidden="true"></div>
+            
+            <div class="container" style="max-width: 900px; position: relative; z-index: 10;">
+                <div class="flex baseline gap-md mb-lg">
+                    <div class="text-huge color-primary font-display">80%</div>
+                    <h2 id="problem-title" class="text-h2">
+                        des projets <abbr title="Intelligence Artificielle">IA</abbr> échouent.<br>
+                        <span style="opacity: 0.5;">Jamais à cause de la technologie.</span>
+                    </h2>
+                </div>
+
+                <div class="grid-2 mb-lg">
+                    <div style="background: rgba(255,255,255,0.05); padding: 2.5rem; border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm);">
+                        <div class="flex items-center gap-sm mb-sm">
+                            <span class="material-symbols-outlined color-primary text-h3" aria-hidden="true">groups</span>
+                            <h4 class="text-h4 color-white">L'humain.</h4>
+                        </div>
+                        <p style="font-size: 1.125rem; opacity: 0.6;">On achète des licences sans accompagner le changement. Les équipes testent, sont déçues, et abandonnent au bout de deux semaines.</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 2.5rem; border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm);">
+                        <div class="flex items-center gap-sm mb-sm">
+                            <span class="material-symbols-outlined color-primary text-h3" aria-hidden="true">account_tree</span>
+                            <h4 class="text-h4 color-white">Le process.</h4>
+                        </div>
+                        <p style="font-size: 1.125rem; opacity: 0.6;">On plaque l'<abbr title="Intelligence Artificielle">IA</abbr> sur des process flous ou cassés. On automatise avant de structurer. L'<abbr title="Intelligence Artificielle">IA</abbr> amplifie le chaos au lieu de le résoudre.</p>
+                    </div>
+                </div>
+
+                <div style="background: var(--primary); padding: 3rem; border-radius: var(--radius-sm); color: var(--navy);" class="flex items-center gap-md">
+                    <span class="material-symbols-outlined" style="font-size: 2rem;" aria-hidden="true">arrow_forward</span>
+                    <p class="text-h4">Pour 1 € investi dans la technologie <abbr title="Intelligence Artificielle">IA</abbr>, il en faut 9 en accompagnement humain et en process. La plupart des entreprises font l'inverse — et cette newsletter existe pour vous éviter d'en faire partie.</p>
+                </div>
+                <p class="source-link" style="margin-top: 2rem; border-color: rgba(255,255,255,0.2);">Sources : MIT Sloan Management Review, BCG 2024</p>
+            </div>
+        </section>
+
+        <!-- 5. Section Features -->
+        <section aria-labelledby="features-title" class="section-padding">
+            <div class="container">
+                <div class="flex baseline gap-md mb-lg" style="justify-content: space-between; align-items: flex-end;">
+                    <div style="max-width: 600px;">
+                        <h2 id="features-title" class="text-hero mb-sm">Chaque mardi matin.</h2>
+                        <p class="text-body-lg" style="font-weight: 500;">5 minutes de lecture. Trois rubriques, toujours les mêmes.</p>
+                    </div>
+                    <span class="material-symbols-outlined" style="font-size: 6rem; color: var(--primary-soft);" aria-hidden="true">forward_to_inbox</span>
+                </div>
+
+                <ol class="grid-3" style="padding:0; list-style:none;">
+                    <!-- Rubrique 1 -->
+                    <li class="rubrique-card">
+                        <div class="icon-circle">
+                            <span class="material-symbols-outlined text-h3" aria-hidden="true">rocket_launch</span>
+                        </div>
+                        <span class="text-caption color-primary" style="margin-bottom: 1rem; display: block;">1 — Cas d'usage</span>
+                        <h3 class="text-h3 mb-sm">Le cas d'usage de la semaine.</h3>
+                        <p class="text-body-lg" style="font-size:1rem; margin-bottom: 2rem;">
+                            Pas un article généraliste sur l'<abbr title="Intelligence Artificielle">IA</abbr>. Un cas d'usage commercial concret, applicable dès le lendemain matin sur vos propres comptes. Voici les premiers cas d'usage préparés pour les éditions de lancement :
+                        </p>
+                        <ul class="rubrique-list">
+                            <li>
+                                <h4>Préparer un appel de prospection en 3 minutes au lieu de 15</h4>
+                                <p class="text-body-lg" style="font-size:0.875rem;">Recherche entreprise, actualités récentes, signaux d'achat, accroche personnalisée et trois questions de qualification, prêtes à l'emploi avant chaque appel.</p>
+                            </li>
+                            <li>
+                                <h4>S'entraîner à traiter les objections difficiles avant l'appel</h4>
+                                <p class="text-body-lg" style="font-size:0.875rem;">Un coach de poche disponible 24h/24 qui joue le rôle du prospect le plus dur, sur n'importe quelle situation, sans mobiliser un manager ni un collègue.</p>
+                            </li>
+                            <li>
+                                <h4>Produire un compte-rendu d'appel exploitable en 1 minute au lieu de 10</h4>
+                                <p class="text-body-lg" style="font-size:0.875rem;">Extraction des informations clés, qualification automatique, prochaines étapes, email de suivi rédigé, mise à jour <abbr title="Customer Relationship Management">CRM</abbr> proposée.</p>
+                            </li>
+                        </ul>
+                        <p class="text-body-lg" style="font-size:0.875rem; font-style: italic; margin-top: 1.5rem; opacity: 0.7;">
+                            Chaque cas d'usage nomme l'outil utilisé, donne les étapes, et livre un résultat concret — pas une idée théorique.
+                        </p>
+                    </li>
+
+                    <!-- Rubrique 2 -->
+                    <li class="rubrique-card">
+                        <div class="icon-circle">
+                            <span class="material-symbols-outlined text-h3" aria-hidden="true">newspaper</span>
+                        </div>
+                        <span class="text-caption color-primary" style="margin-bottom: 1rem; display: block;">2 — Actus</span>
+                        <h3 class="text-h3 mb-sm">L'actu Sales Tech.</h3>
+                        <p class="text-body-lg" style="font-size:1rem;">
+                            L'écosystème de la vente assistée par <abbr title="Intelligence Artificielle">IA</abbr> bouge chaque semaine. On décrypte ce que chaque annonce change concrètement pour un directeur commercial de <abbr title="Petites et Moyennes Entreprises">PME</abbr>, un manager d'équipe ou un commercial terrain.
+                        </p>
+                    </li>
+
+                    <!-- Rubrique 3 -->
+                    <li class="rubrique-card">
+                        <div class="icon-circle">
+                            <span class="material-symbols-outlined text-h3" aria-hidden="true">build</span>
+                        </div>
+                        <span class="text-caption color-primary" style="margin-bottom: 1rem; display: block;">3 — Outil</span>
+                        <h3 class="text-h3 mb-sm">L'outil de la semaine.</h3>
+                        <p class="text-body-lg" style="font-size:1rem;">
+                            Un outil <abbr title="Intelligence Artificielle">IA</abbr> utile aux commerciaux. Décodé en deux temps : ce qu'il faut savoir, et pourquoi c'est important pour vos ventes.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 6. Section Pourquoi -->
+        <section aria-labelledby="why-title" class="bg-charcoal color-white section-padding">
+            <div class="container" style="max-width: 800px;">
+                <h2 id="why-title" class="text-h2 mb-lg">Pourquoi une newsletter dédiée aux ventes ?</h2>
+                
+                <div class="text-body-lg color-white" style="opacity: 0.8; margin-bottom: 4rem;">
+                    <p style="margin-bottom: 1.5rem;">Parce qu'un cas d'usage <abbr title="Intelligence Artificielle">IA</abbr> pensé pour un service marketing, <abbr title="Ressources Humaines">RH</abbr> ou IT ne sert à rien à un commercial qui doit relancer 40 prospects, qualifier un compte clé ou conclure un cycle de six mois.</p>
+                    <p style="margin-bottom: 1.5rem;">Parce que l'<abbr title="Intelligence Artificielle">IA</abbr> ne va pas remplacer vos commerciaux. Elle va les rendre plus efficaces — à condition qu'ils ne s'en servent pas pour automatiser des relances impersonnelles qui détruisent votre image de marque en deux trimestres.</p>
+                    <p>Parce que 15 ans en vente <abbr title="Business to Business">B2B</abbr> m'ont appris une chose : aucun outil ne corrige un processus mal structuré. C'est pour ça que cette newsletter parle de méthode avant de parler d'outils, et d'humain avant de parler de machine.</p>
+                </div>
+
+                <div style="background: rgba(249,165,0,0.05); border: 2px solid rgba(249,165,0,0.3); padding: 3rem; border-radius: var(--radius-sm);">
+                    <p class="text-h2 color-primary">
+                        D'abord l'humain,<br>
+                        ensuite le process,<br>
+                        ensuite l'outil.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6bis. CTA Intermédiaire -->
+        <section aria-labelledby="cta-mid-title" class="bg-surface section-padding">
+            <div class="container text-center" style="max-width: 800px;">
+                <div style="background: var(--navy); padding: 4rem 3rem; border-radius: var(--radius-md); box-shadow: var(--shadow-premium);">
+                    <h2 id="cta-mid-title" class="text-h2 color-white mb-sm">Le prochain numéro part mardi prochain.</h2>
+                    <p class="text-body-lg" style="color: rgba(255,255,255,0.7); margin-bottom: 2rem;">Rejoignez-le.</p>
+                    <div style="margin-bottom: 1.5rem;">
+                        <button type="button" class="btn btn-large js-open-tally">Je m'abonne</button>
+                    </div>
+                    <p class="text-caption" style="color: rgba(255,255,255,0.4);">Gratuit. Un email par semaine. Désinscription en un clic.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Profil Auteur -->
+        <article aria-labelledby="author-title" id="qui-ecrit" class="bg-white section-padding">
+            <div class="container" style="max-width: 900px;">
+                <div class="grid-2 gap-lg" style="align-items: start;">
+                    <div style="position: sticky; top: 8rem;">
+                        <h2 id="author-title" class="text-h2 mb-md">Qui écrit cette newsletter ?</h2>
+                        <div class="img-grayscale"><img src="amelie-marrone.jpg" alt="Portrait d'Amélie Marrone, fondatrice de Ventes-IA" width="600" height="750" loading="lazy" decoding="async"></div>
+                    </div>
+                    <div>
+                        <div class="mb-md">
+                            <h3 class="text-h3" style="margin-bottom: 0.5rem;">Amélie Marrone</h3>
+                            <p class="text-caption color-primary">Consultante & formatrice IA</p>
+                        </div>
+                        <div class="text-body-lg" style="margin-bottom: 3rem;">
+                            <p style="margin-bottom: 1.5rem;">Après 15 ans à faire adopter des outils à des équipes commerciales, j'ai voulu mettre cette expérience au service des entreprises qui veulent réussir leur intégration <abbr title="Intelligence Artificielle">IA</abbr> — pas juste l'acheter.</p>
+                            <p style="margin-bottom: 1.5rem;">J'ai co-développé <span style="color:var(--charcoal); font-weight:900; border-bottom: 2px solid var(--primary-glow)">PhonePlus <abbr title="Customer Relationship Management">CRM</abbr></span> en observant les meilleurs commerciaux de mes clients. On a intégré leur process dans l'outil. Résultat : <span style="color:var(--charcoal); font-weight:900;">+30 % de conversion</span> — pas parce que l'outil est magique, mais parce que le process est bon, et que les équipes l'ont adopté.</p>
+                            <p>Aujourd'hui, je fais la même chose avec l'<abbr title="Intelligence Artificielle">IA</abbr>. Et cette newsletter, c'est ma façon de partager chaque semaine ce que j'apprends sur le terrain.</p>
+                        </div>
+                        <div style="padding-top: 2rem; border-top: 1px solid var(--outline);">
+                            <p class="text-h4 mb-md">Experte en vente, formée à l'<abbr title="Intelligence Artificielle">IA</abbr>. Pas l'inverse.</p>
+                            <p class="text-caption" style="font-size: 0.6875rem; opacity: 0.5; letter-spacing: 0.15em; margin-bottom: 2rem; line-height: 1.8;">
+                                Consultante en prospection <abbr title="Business to Business">B2B</abbr> · 15 ans · Co-développeuse de PhonePlus <abbr title="Customer Relationship Management">CRM</abbr> · 50+ <abbr title="Petites et Moyennes Entreprises">PME</abbr> accompagnées · Animatrice du Casse-Tête de l'<abbr title="Intelligence Artificielle">IA</abbr> Générative
+                            </p>
+                            <a href="https://envolia.fr" target="_blank" rel="noopener" class="btn btn-large" style="background:var(--navy); color:var(--white);">
+                                Découvrir envolia.fr
+                                <span class="material-symbols-outlined" aria-hidden="true" style="font-size:1.25rem;">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 8. FAQ -->
+        <section aria-labelledby="faq-title" class="bg-surface section-padding">
+            <div class="container" style="max-width: 800px;">
+                <div class="flex items-center gap-md mb-lg">
+                    <h2 id="faq-title" class="text-h2">Des réponses.</h2>
+                    <div style="flex-grow: 1; height: 1px; background: var(--outline);"></div>
+                </div>
+                
+                <details>
+                    <summary>C'est gratuit ?</summary>
+                    <p>Oui, intégralement.</p>
+                </details>
+                <details>
+                    <summary>À quelle fréquence ?</summary>
+                    <p>Un email par semaine, le mardi matin.</p>
+                </details>
+                <details>
+                    <summary>À qui ça s'adresse ?</summary>
+                    <p>Dirigeants, directeurs commerciaux, commerciaux, entrepreneurs. Toute personne qui est concernée par la vente de produits ou de services.</p>
+                </details>
+                <details>
+                    <summary>Et si ce n'est pas pour moi ?</summary>
+                    <p>Désinscription en un clic, sans formulaire, sans question.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- 10. Final CTA -->
+        <section aria-labelledby="cta-final" class="bg-white section-padding" style="border-top: 1px solid rgba(209,209,207,0.2);">
+            <div class="container text-center" style="max-width: 900px;">
+                <h2 id="cta-final" class="text-hero mb-lg">
+                    5 minutes par semaine pour <i>ne plus jamais</i> subir l'<abbr title="Intelligence Artificielle">IA</abbr> dans vos ventes.
+                </h2>
+                <div style="background: var(--navy); padding: 3rem; border-radius: var(--radius-md); box-shadow: var(--shadow-premium);">
+                    <div style="margin-bottom: 2rem;">
+                        <button type="button" class="btn btn-large js-open-tally">Recevoir la prochaine édition</button>
+                    </div>
+                    <p class="text-caption" style="color: rgba(255,255,255,0.4);">Gratuit. Un email par semaine. Désinscription en un clic.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 11. Footer -->
+    <footer role="contentinfo" class="footer">
+        <div class="container">
+            <div class="grid-2 align-items" style="align-items: center;">
+                <div>
+                    <p class="text-h3 color-white mb-sm" style="font-family: var(--font-body); font-weight: 800; letter-spacing: -0.02em;">Ventes-IA</p>
+                    <p class="text-caption mb-sm" style="color: rgba(255,255,255,0.6);">La newsletter pour mieux vendre avec l'IA, sans perdre l'humain.</p>
+                    <p class="text-caption" style="font-size: 0.625rem; font-weight: 500; max-width: 400px; line-height: 1.8;">
+                        Amélie Marrone · Lyon · Grenoble · Annecy · Chambéry · Distanciel France
+                    </p>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+                    <div class="flex gap-md text-caption" style="font-size: 0.6875rem;">
+                        <a href="https://linkedin.com/in/ameliemarrone" target="_blank" rel="noopener" class="footer-a">LinkedIn</a>
+                    </div>
+                    <div class="flex gap-md text-caption" style="font-size: 0.6875rem; opacity: 0.3;">
+                        <a href="#" class="footer-a">Mentions légales</a>
+                        <a href="#" class="footer-a">Confidentialité</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tally popup integration -->
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <script>
+      (function () {
+        var TALLY_ID = 'q4KLL8';
+        function openTally() {
+          if (window.Tally && typeof window.Tally.openPopup === 'function') {
+            window.Tally.openPopup(TALLY_ID, {
+              layout: 'modal',
+              width: 520,
+              hideTitle: false,
+              autoClose: 2000
+            });
+          } else {
+            window.open('https://tally.so/r/' + TALLY_ID, '_blank', 'noopener');
+          }
+        }
+        document.querySelectorAll('.js-open-tally').forEach(function (btn) {
+          btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            openTally();
+          });
+        });
+      })();
+    </script>
+</body>
+</html>
