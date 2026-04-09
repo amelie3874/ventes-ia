@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — Ventes-IA</title>
+  <meta name="description" content="Politique de confidentialité et de protection des données personnelles des sites envolia.fr et ventes-ia.fr.">
+  <link rel="canonical" href="https://ventes-ia.fr/politique-de-confidentialite">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #f9a500;
+      --on-primary: #1a1c19;
+      --background: #fafaf9;
+      --surface: #ffffff;
+      --surface-container-low: #fafaf9;
+      --on-surface: #1a1c19;
+      --on-surface-variant: #444440;
+      --outline: #d1d1cf;
+      --navy: #0f0f11;
+      --charcoal: #1c1c1e;
+      --white: #ffffff;
+      --font-display: 'Bricolage Grotesque', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --radius-md: 0.75rem;
+      --radius-lg: 1.25rem;
+      --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--surface-container-low);
+      color: var(--on-surface);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(250, 250, 249, 0.9);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 1rem 0;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--on-surface);
+      text-decoration: none;
+    }
+
+    nav a.back-link {
+      font-size: 0.8125rem;
+      color: var(--on-surface-variant);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a.back-link:hover {
+      color: var(--primary);
+    }
+
+    .legal-content {
+      padding-top: 8rem;
+      padding-bottom: 6rem;
+    }
+
+    .legal-content h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-content .subtitle {
+      font-size: 0.875rem;
+      color: var(--on-surface-variant);
+      margin-bottom: 0.5rem;
+    }
+
+    .legal-content .date {
+      font-size: 0.75rem;
+      color: var(--outline);
+      margin-bottom: 3rem;
+    }
+
+    .legal-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: var(--charcoal);
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--outline);
+    }
+
+    .legal-content p {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--on-surface-variant);
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .legal-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    .legal-content ul li {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--on-surface-variant);
+      padding: 0.25rem 0 0.25rem 1.25rem;
+      position: relative;
+    }
+
+    .legal-content ul li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .legal-content ul li strong {
+      color: var(--on-surface);
+      font-weight: 600;
+    }
+
+    .legal-content a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .legal-content a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: var(--navy);
+      padding: 4rem 0;
+      text-align: center;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    footer a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: var(--primary);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">Ventes-IA</a>
+      <a href="/" class="back-link">← Retour au site</a>
+    </div>
+  </nav>
+
+  <main class="legal-content">
+    <div class="container">
+      <h1>Politique de confidentialité</h1>
+      <p class="subtitle">Sites internet envolia.fr et ventes-ia.fr</p>
+      <p class="date">Dernière mise à jour : 9 avril 2026</p>
+
+      <h2>Introduction</h2>
+      <p>La présente politique de confidentialité décrit les règles relatives à la protection des données personnelles appliquées par Amélie Marrone en tant que responsable de traitement des sites internet envolia.fr et ventes-ia.fr (ci-après « les Sites »), en application du Règlement Général sur la Protection des Données (RGPD) n°2016/679 et de la loi n°78-17 du 6 janvier 1978 dite « Informatique et Libertés ».</p>
+      <p>Cette politique est susceptible d'être modifiée, notamment en fonction des évolutions législatives et réglementaires.</p>
+
+      <h2>Identité du responsable de traitement</h2>
+      <p>Amélie Marrone, immatriculée sous le numéro SIREN 991 720 467, dont l'adresse est 30 Avenue Maréchal Foch, 69006 Lyon.</p>
+      <p>Contact : amelie@trajectoire-ventes.fr</p>
+
+      <h2>Principes généraux</h2>
+      <p>En qualité de responsable de traitement, Amélie Marrone s'assure que les données personnelles collectées via les Sites sont :</p>
+      <ul>
+        <li>traitées de manière licite, loyale et transparente ;</li>
+        <li>collectées pour des finalités déterminées, explicites et légitimes ;</li>
+        <li>adéquates, pertinentes et limitées à ce qui est nécessaire (minimisation) ;</li>
+        <li>exactes et, si nécessaire, tenues à jour ;</li>
+        <li>conservées pendant une durée n'excédant pas celle nécessaire ;</li>
+        <li>traitées de façon à garantir une sécurité appropriée.</li>
+      </ul>
+
+      <h2>Données personnelles collectées</h2>
+      <p>Les Sites disposent de formulaires de contact en ligne permettant de recevoir les demandes d'information et de rappel des visiteurs.</p>
+      <p>Les catégories de données personnelles collectées via ces formulaires sont : nom, entreprise, adresse email, numéro de téléphone, description du besoin.</p>
+
+      <h2>Finalités et bases légales du traitement</h2>
+      <p>Les données personnelles sont collectées à des fins de :</p>
+      <ul>
+        <li>gestion de la relation commerciale (réponse aux demandes d'information, prise de contact) ;</li>
+        <li>envoi de communications commerciales, sous réserve du consentement préalable de la personne concernée.</li>
+      </ul>
+      <p>Les bases légales du traitement sont : le consentement de la personne et/ou l'intérêt légitime poursuivi par Amélie Marrone dans le cadre de son activité professionnelle.</p>
+
+      <h2>Destinataires des données</h2>
+      <p>Les données personnelles collectées sont destinées uniquement à Amélie Marrone. Elles ne sont ni vendues, ni cédées, ni communiquées à des tiers.</p>
+      <p>Les données sont stockées dans des outils numériques sécurisés (formulaire en ligne et base de données de gestion).</p>
+
+      <h2>Transfert hors de l'Union Européenne</h2>
+      <p>Les données collectées sont susceptibles d'être traitées en dehors de l'Union Européenne, notamment via les outils d'hébergement et de gestion utilisés. Les fournisseurs de ces outils peuvent être soumis à des cadres de transfert reconnus par la Commission européenne (décisions d'adéquation, clauses contractuelles types).</p>
+
+      <h2>Durée de conservation</h2>
+      <p>Les données personnelles sont conservées pendant une durée maximale de 3 ans à compter du dernier contact avec la personne concernée, sauf obligation légale de conservation plus longue.</p>
+
+      <h2>Sécurité des données</h2>
+      <p>Amélie Marrone met en œuvre les mesures techniques et organisationnelles appropriées afin de garantir un niveau de sécurité adapté aux risques : accès restreint aux données, utilisation de services sécurisés, connexions chiffrées (HTTPS).</p>
+
+      <h2>Notification de violation</h2>
+      <p>Toute violation de données personnelles sera notifiée à la CNIL dans les 72 heures et, si nécessaire, aux personnes physiques concernées.</p>
+
+      <h2>Exercice de vos droits</h2>
+      <p>Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
+      <ul>
+        <li><strong>Droit d'information :</strong> savoir si vos données sont traitées et pourquoi.</li>
+        <li><strong>Droit d'accès :</strong> obtenir une copie des données collectées vous concernant.</li>
+        <li><strong>Droit de rectification :</strong> demander la correction de données inexactes ou incomplètes.</li>
+        <li><strong>Droit d'effacement :</strong> demander la suppression de vos données.</li>
+        <li><strong>Droit d'opposition :</strong> vous opposer au traitement de vos données, notamment à des fins de prospection.</li>
+        <li><strong>Droit à la portabilité :</strong> recevoir vos données dans un format structuré et lisible.</li>
+        <li><strong>Droit de limitation :</strong> demander la restriction du traitement de vos données.</li>
+      </ul>
+      <p>Pour exercer ces droits, adressez votre demande accompagnée d'un justificatif d'identité à : amelie@trajectoire-ventes.fr ou par courrier à Amélie Marrone, 30 Avenue Maréchal Foch, 69006 Lyon.</p>
+      <p>Si vous estimez que vos droits ne sont pas respectés après nous avoir contactés, vous pouvez adresser une réclamation à la <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>.</p>
+
+      <h2>Cookies</h2>
+      <p>Les Sites n'utilisent actuellement aucun cookie de suivi, d'analyse ou publicitaire.</p>
+      <p>Si des cookies venaient à être déployés ultérieurement, cette politique sera mise à jour et un bandeau de consentement sera affiché conformément à la réglementation en vigueur.</p>
+
+      <h2>Réseaux sociaux</h2>
+      <p>Les Sites peuvent contenir des liens vers des réseaux sociaux. Amélie Marrone ne gère pas les données collectées par ces plateformes. Nous vous invitons à consulter les politiques de confidentialité des réseaux sociaux concernés.</p>
+
+      <h2>Contact</h2>
+      <p>Pour toute question relative à cette politique, vous pouvez envoyer votre demande à : amelie@trajectoire-ventes.fr</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p style="margin-bottom: 1.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.3);">Ventes-IA.fr — La newsletter pour mieux vendre avec l'IA — Amélie Marrone</p>
+      <div style="display: flex; gap: 2rem; justify-content: center;">
+        <a href="/">Accueil</a>
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/politique-de-confidentialite">Confidentialité</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

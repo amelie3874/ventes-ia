@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions légales — Ventes-IA</title>
+  <meta name="description" content="Mentions légales des sites envolia.fr et ventes-ia.fr, édités par Amélie Marrone.">
+  <link rel="canonical" href="https://ventes-ia.fr/mentions-legales">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #f9a500;
+      --on-primary: #1a1c19;
+      --background: #fafaf9;
+      --surface: #ffffff;
+      --surface-container-low: #fafaf9;
+      --on-surface: #1a1c19;
+      --on-surface-variant: #444440;
+      --outline: #d1d1cf;
+      --navy: #0f0f11;
+      --charcoal: #1c1c1e;
+      --white: #ffffff;
+      --font-display: 'Bricolage Grotesque', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --radius-md: 0.75rem;
+      --radius-lg: 1.25rem;
+      --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--surface-container-low);
+      color: var(--on-surface);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(250, 250, 249, 0.9);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 1rem 0;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--on-surface);
+      text-decoration: none;
+    }
+
+    nav a.back-link {
+      font-size: 0.8125rem;
+      color: var(--on-surface-variant);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a.back-link:hover {
+      color: var(--primary);
+    }
+
+    /* Content */
+    .legal-content {
+      padding-top: 8rem;
+      padding-bottom: 6rem;
+    }
+
+    .legal-content h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-content .subtitle {
+      font-size: 0.875rem;
+      color: var(--on-surface-variant);
+      margin-bottom: 0.5rem;
+    }
+
+    .legal-content .date {
+      font-size: 0.75rem;
+      color: var(--outline);
+      margin-bottom: 3rem;
+    }
+
+    .legal-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: var(--charcoal);
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--outline);
+    }
+
+    .legal-content p {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--on-surface-variant);
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .legal-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-content a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .legal-content a:hover {
+      text-decoration: underline;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.9375rem;
+    }
+
+    .info-table td {
+      padding: 0.625rem 1rem;
+      border-bottom: 1px solid var(--outline);
+      color: var(--on-surface-variant);
+      line-height: 1.5;
+    }
+
+    .info-table td:first-child {
+      font-weight: 600;
+      color: var(--on-surface);
+      width: 35%;
+      white-space: nowrap;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      padding: 4rem 0;
+      text-align: center;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    footer a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: var(--primary);
+    }
+
+    @media (max-width: 600px) {
+      .info-table td:first-child { width: auto; white-space: normal; }
+      .info-table td { display: block; padding: 0.375rem 0; }
+      .info-table tr { display: block; padding: 0.5rem 0; border-bottom: 1px solid var(--outline); }
+      .info-table td { border: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">Ventes-IA</a>
+      <a href="/" class="back-link">← Retour au site</a>
+    </div>
+  </nav>
+
+  <main class="legal-content">
+    <div class="container">
+      <h1>Mentions légales</h1>
+      <p class="subtitle">Sites internet envolia.fr et ventes-ia.fr</p>
+      <p class="date">Dernière mise à jour : 9 avril 2026</p>
+
+      <h2>Article 1 – Éditeur des sites</h2>
+      <p>Les sites internet envolia.fr et ventes-ia.fr (ci-après « les Sites ») sont édités par :</p>
+      <table class="info-table">
+        <tr><td>Nom et prénom</td><td>Amélie Marrone</td></tr>
+        <tr><td>Adresse</td><td>30 Avenue Maréchal Foch, 69006 Lyon</td></tr>
+        <tr><td>SIREN</td><td>991 720 467</td></tr>
+        <tr><td>Email</td><td>amelie@trajectoire-ventes.fr</td></tr>
+      </table>
+
+      <h2>Article 2 – Directeur de la publication</h2>
+      <p>Le directeur de la publication des Sites est Amélie Marrone.</p>
+      <p>Contact : amelie@trajectoire-ventes.fr</p>
+
+      <h2>Article 3 – Hébergeur</h2>
+      <p>Les Sites sont hébergés par :</p>
+      <table class="info-table">
+        <tr><td>Raison sociale</td><td>Vercel Inc.</td></tr>
+        <tr><td>Adresse</td><td>340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis</td></tr>
+        <tr><td>Site web</td><td><a href="https://vercel.com" target="_blank" rel="noopener">https://vercel.com</a></td></tr>
+      </table>
+
+      <h2>Article 4 – Propriété intellectuelle</h2>
+      <p>L'ensemble des contenus présents sur les Sites (textes, images, graphismes, logo, icônes, sons, logiciels, etc.) sont la propriété exclusive d'Amélie Marrone, sauf mention contraire.</p>
+      <p>Toute reproduction, représentation, modification, publication, transmission ou dénaturation, totale ou partielle, des contenus des Sites est strictement interdite sans l'autorisation écrite préalable d'Amélie Marrone.</p>
+      <p>Les utilisateurs s'engagent à ne pas utiliser, transmettre ou reproduire tout ou partie de ces contenus en vue de l'organisation ou de l'animation de prestations connexes à celles exercées par Amélie Marrone. Aucune action de parasitisme et de concurrence déloyale ne sera tolérée, et des actions en justice pourront être engagées.</p>
+
+      <h2>Article 5 – Données personnelles</h2>
+      <p>Les données personnelles collectées via les formulaires de contact présents sur les Sites (nom, entreprise, email, téléphone, besoin) sont traitées par Amélie Marrone, responsable de traitement, uniquement dans le cadre de la gestion de la relation commerciale (réponse aux demandes, prise de contact).</p>
+      <p>Aucune donnée personnelle n'est vendue, transférée ou communiquée à des tiers.</p>
+      <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition concernant vos données personnelles.</p>
+      <p>Pour exercer ces droits, contactez Amélie Marrone par email à l'adresse : amelie@trajectoire-ventes.fr</p>
+      <p>Pour plus de détails, veuillez consulter notre <a href="/politique-de-confidentialite">Politique de Confidentialité</a>.</p>
+
+      <h2>Article 6 – Cookies</h2>
+      <p>Les Sites n'utilisent actuellement aucun cookie de suivi ou d'analyse.</p>
+      <p>Si des cookies venaient à être mis en place ultérieurement, cette page sera mise à jour et un bandeau de consentement sera affiché conformément à la réglementation en vigueur.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p style="margin-bottom: 1.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.3);">Ventes-IA.fr — La newsletter pour mieux vendre avec l'IA — Amélie Marrone</p>
+      <div style="display: flex; gap: 2rem; justify-content: center;">
+        <a href="/">Accueil</a>
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/politique-de-confidentialite">Confidentialité</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
