@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Envolia hummingbird favicon -->
+  <!-- Outer bird silhouette -->
+  <path fill="#F5A623" d="
+    M 35 5
+    Q 20 5, 10 25
+    Q 0 50, 10 72
+    Q 18 85, 35 95
+    Q 38 92, 38 85
+    Q 30 75, 22 60
+    Q 15 45, 22 28
+    Q 28 15, 42 12
+    Q 55 10, 65 18
+    Q 75 26, 78 40
+    Q 80 50, 75 60
+    Q 70 70, 58 72
+    Q 48 73, 42 65
+    L 35 5 Z
+  "/>
+  <!-- Upper wing -->
+  <path fill="#F5A623" d="
+    M 65 18
+    Q 75 8, 88 10
+    Q 96 12, 98 22
+    Q 98 30, 92 32
+    Q 82 33, 72 28
+    Q 68 25, 65 18 Z
+  "/>
+  <!-- Lower wing -->
+  <path fill="#F5A623" d="
+    M 58 72
+    Q 68 75, 80 68
+    Q 88 62, 92 52
+    Q 94 46, 90 44
+    Q 86 43, 82 48
+    Q 75 58, 65 66
+    Q 60 70, 58 72 Z
+  "/>
+  <!-- Internal structure lines -->
+  <line x1="35" y1="5" x2="62" y2="42" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="35" y1="95" x2="62" y2="42" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="42" y1="65" x2="62" y2="42" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Vertex dots -->
+  <circle cx="35" cy="5" r="3" fill="#F5A623"/>
+  <circle cx="35" cy="95" r="3" fill="#F5A623"/>
+  <circle cx="42" cy="65" r="3" fill="#F5A623"/>
+</svg>
