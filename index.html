@@ -10,6 +10,11 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://ventes-ia.fr/">
 
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
@@ -17,21 +22,18 @@
     <meta property="og:description" content="La première newsletter française entièrement dédiée à l'IA appliquée aux ventes. Chaque mardi, 5 minutes pour transformer le bruit IA en décisions concrètes pour votre fonction commerciale.">
     <meta property="og:url" content="https://ventes-ia.fr/">
     <meta property="og:site_name" content="Ventes-IA">
-    <meta property="og:image" content="https://ventes-ia.fr/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Mieux vendre avec l'IA. Sans perdre l'humain. — Newsletter Ventes-IA">
+    <meta property="og:image" content="https://ventes-ia.fr/og-image.jpg">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ventes-IA — La newsletter pour mieux vendre avec l'IA, sans perdre l'humain">
     <meta name="twitter:description" content="La première newsletter française entièrement dédiée à l'IA appliquée aux ventes.">
-    <meta name="twitter:image" content="https://ventes-ia.fr/og-image.png">
+    <meta name="twitter:image" content="https://ventes-ia.fr/og-image.jpg">
 
     <!-- Fonts preconnect and preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" fetchpriority="high">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" fetchpriority="high">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300,0..1&display=swap" rel="stylesheet">
 
     <!-- JSON-LD AEO / GEO -->
@@ -52,6 +54,11 @@
           "url": "https://ventes-ia.fr/",
           "founder": {
             "@id": "https://ventes-ia.fr/#person"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "contact@envolia.fr"
           },
           "sameAs": [
             "https://linkedin.com/in/ameliemarrone",
@@ -143,7 +150,7 @@
             --white: #ffffff;
             
             /* Typography */
-            --font-display: 'Bricolage Grotesque', sans-serif;
+            --font-display: 'Instrument Serif', serif;
             --font-body: 'Inter', sans-serif;
             
             /* Spacing */
@@ -417,16 +424,15 @@
 
         /* Image Grayscale */
         .img-grayscale {
-            aspect-ratio: 1/1; background: var(--surface-container-high); border-radius: 50%;
+            aspect-ratio: 4/5; background: var(--surface-container-high); border-radius: var(--radius-md);
             box-shadow: var(--shadow-premium); overflow: hidden; position: relative;
-            width: 180px; max-width: 100%; margin: 1rem 0 2rem;
         }
-        .img-grayscale img {
-            width: 100%; height: 100%; object-fit: cover; display: block;
-            filter: grayscale(100%) contrast(1.05);
-            transition: filter 0.4s ease;
+        .img-grayscale::after {
+            content: "\e853"; /* account_circle material icon */
+            font-family: 'Material Symbols Outlined';
+            position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+            font-size: 15rem; color: rgba(15, 15, 17, 0.1);
         }
-        .img-grayscale:hover img { filter: grayscale(0%) contrast(1); }
 
         /* FAQ Details */
         details {
@@ -466,7 +472,7 @@
     <!-- 1. Nav -->
     <header role="banner" class="nav-bar">
         <nav aria-label="Navigation principale" class="nav-content">
-            <a href="/" class="nav-logo" aria-label="Ventes-IA - Retour à l'accueil" style="font-family: var(--font-body); font-weight: 800; letter-spacing: -0.02em;">Ventes-IA</a>
+            <a href="https://envolia.fr" class="nav-logo" aria-label="Ventes-IA - Retour à l'accueil" style="font-family: var(--font-body); font-weight: 800; letter-spacing: -0.02em;">Ventes-IA</a>
             <div class="nav-links">
                 <a href="#newsletter" class="nav-link">La newsletter</a>
                 <a href="#qui-ecrit" class="nav-link">Qui écrit</a>
@@ -491,9 +497,11 @@
                     Sans jargon, sans buzz, et sans déshumaniser la relation client.
                 </p>
                 <div id="sinscrire">
-                    <div style="display:flex; justify-content:center;">
-                        <button type="button" class="btn btn-large js-open-tally">Recevoir la prochaine édition</button>
-                    </div>
+                    <form action="#" method="post" class="form-inline">
+                        <label for="email-hero" class="sr-only">Votre email professionnel</label>
+                        <input type="email" id="email-hero" class="input-base" placeholder="Votre email professionnel" required autocomplete="email">
+                        <button type="submit" class="btn btn-large">Recevoir la prochaine édition</button>
+                    </form>
                     <p class="text-caption mt-6" style="margin-top: 1.5rem; opacity: 0.4;">Gratuit. Un email par semaine. Désinscription en un clic.</p>
                 </div>
             </div>
@@ -676,9 +684,11 @@
                 <div style="background: var(--navy); padding: 4rem 3rem; border-radius: var(--radius-md); box-shadow: var(--shadow-premium);">
                     <h2 id="cta-mid-title" class="text-h2 color-white mb-sm">Le prochain numéro part mardi prochain.</h2>
                     <p class="text-body-lg" style="color: rgba(255,255,255,0.7); margin-bottom: 2rem;">Rejoignez-le.</p>
-                    <div style="margin-bottom: 1.5rem;">
-                        <button type="button" class="btn btn-large js-open-tally">Je m'abonne</button>
-                    </div>
+                    <form action="#" method="post" class="form-inline" style="margin-bottom: 1.5rem;">
+                        <label for="email-mid" class="sr-only">Votre email professionnel</label>
+                        <input type="email" id="email-mid" class="input-base" placeholder="Votre email professionnel" required autocomplete="email">
+                        <button type="submit" class="btn btn-large">Je m'abonne</button>
+                    </form>
                     <p class="text-caption" style="color: rgba(255,255,255,0.4);">Gratuit. Un email par semaine. Désinscription en un clic.</p>
                 </div>
             </div>
@@ -690,7 +700,7 @@
                 <div class="grid-2 gap-lg" style="align-items: start;">
                     <div style="position: sticky; top: 8rem;">
                         <h2 id="author-title" class="text-h2 mb-md">Qui écrit cette newsletter ?</h2>
-                        <div class="img-grayscale"><img src="amelie-marrone.jpg" alt="Portrait d'Amélie Marrone, fondatrice de Ventes-IA" width="600" height="750" loading="lazy" decoding="async"></div>
+                        <div class="img-grayscale"></div>
                     </div>
                     <div>
                         <div class="mb-md">
@@ -751,9 +761,11 @@
                     5 minutes par semaine pour <i>ne plus jamais</i> subir l'<abbr title="Intelligence Artificielle">IA</abbr> dans vos ventes.
                 </h2>
                 <div style="background: var(--navy); padding: 3rem; border-radius: var(--radius-md); box-shadow: var(--shadow-premium);">
-                    <div style="margin-bottom: 2rem;">
-                        <button type="button" class="btn btn-large js-open-tally">Recevoir la prochaine édition</button>
-                    </div>
+                    <form action="#" method="post" class="form-inline" style="margin-bottom: 2rem;">
+                        <label for="email-final" class="sr-only">Votre email professionnel</label>
+                        <input type="email" id="email-final" class="input-base" placeholder="Votre email professionnel" required autocomplete="email">
+                        <button type="submit" class="btn btn-large">Recevoir la prochaine édition</button>
+                    </form>
                     <p class="text-caption" style="color: rgba(255,255,255,0.4);">Gratuit. Un email par semaine. Désinscription en un clic.</p>
                 </div>
             </div>
@@ -766,48 +778,24 @@
             <div class="grid-2 align-items" style="align-items: center;">
                 <div>
                     <p class="text-h3 color-white mb-sm" style="font-family: var(--font-body); font-weight: 800; letter-spacing: -0.02em;">Ventes-IA</p>
-                    <p class="text-caption mb-sm" style="color: rgba(255,255,255,0.6);">La newsletter pour mieux vendre avec l'IA, sans perdre l'humain.</p>
+                    <p class="text-caption mb-sm" style="color: rgba(255,255,255,0.6);">Une publication d'envolia.fr</p>
                     <p class="text-caption" style="font-size: 0.625rem; font-weight: 500; max-width: 400px; line-height: 1.8;">
                         Amélie Marrone · Lyon · Grenoble · Annecy · Chambéry · Distanciel France
                     </p>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 2rem;">
                     <div class="flex gap-md text-caption" style="font-size: 0.6875rem;">
+                        <a href="https://envolia.fr" class="footer-a">envolia.fr</a>
                         <a href="https://linkedin.com/in/ameliemarrone" target="_blank" rel="noopener" class="footer-a">LinkedIn</a>
                     </div>
                     <div class="flex gap-md text-caption" style="font-size: 0.6875rem; opacity: 0.3;">
-                        <a href="/mentions-legales" class="footer-a">Mentions légales</a>
-                        <a href="/politique-de-confidentialite" class="footer-a">Confidentialité</a>
+                        <a href="#" class="footer-a">Mentions légales</a>
+                        <a href="#" class="footer-a">Confidentialité</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Tally popup integration -->
-    <script async src="https://tally.so/widgets/embed.js"></script>
-    <script>
-      (function () {
-        var TALLY_ID = 'q4KLL8';
-        function openTally() {
-          if (window.Tally && typeof window.Tally.openPopup === 'function') {
-            window.Tally.openPopup(TALLY_ID, {
-              layout: 'modal',
-              width: 520,
-              hideTitle: false,
-              autoClose: 2000
-            });
-          } else {
-            window.open('https://tally.so/r/' + TALLY_ID, '_blank', 'noopener');
-          }
-        }
-        document.querySelectorAll('.js-open-tally').forEach(function (btn) {
-          btn.addEventListener('click', function (e) {
-            e.preventDefault();
-            openTally();
-          });
-        });
-      })();
-    </script>
 </body>
 </html>
