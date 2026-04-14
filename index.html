@@ -10,11 +10,6 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://ventes-ia.fr/">
 
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" sizes="48x48">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
@@ -22,18 +17,21 @@
     <meta property="og:description" content="La première newsletter française entièrement dédiée à l'IA appliquée aux ventes. Chaque mardi, 5 minutes pour transformer le bruit IA en décisions concrètes pour votre fonction commerciale.">
     <meta property="og:url" content="https://ventes-ia.fr/">
     <meta property="og:site_name" content="Ventes-IA">
-    <meta property="og:image" content="https://ventes-ia.fr/og-image.jpg">
+    <meta property="og:image" content="https://ventes-ia.fr/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Mieux vendre avec l'IA. Sans perdre l'humain. — Newsletter Ventes-IA">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ventes-IA — La newsletter pour mieux vendre avec l'IA, sans perdre l'humain">
     <meta name="twitter:description" content="La première newsletter française entièrement dédiée à l'IA appliquée aux ventes.">
-    <meta name="twitter:image" content="https://ventes-ia.fr/og-image.jpg">
+    <meta name="twitter:image" content="https://ventes-ia.fr/og-image.png">
 
     <!-- Fonts preconnect and preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" fetchpriority="high">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" fetchpriority="high">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300,0..1&display=swap" rel="stylesheet">
 
     <!-- JSON-LD AEO / GEO -->
@@ -54,11 +52,6 @@
           "url": "https://ventes-ia.fr/",
           "founder": {
             "@id": "https://ventes-ia.fr/#person"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer support",
-            "email": "contact@envolia.fr"
           },
           "sameAs": [
             "https://linkedin.com/in/ameliemarrone",
@@ -150,7 +143,7 @@
             --white: #ffffff;
             
             /* Typography */
-            --font-display: 'Instrument Serif', serif;
+            --font-display: 'Bricolage Grotesque', sans-serif;
             --font-body: 'Inter', sans-serif;
             
             /* Spacing */
@@ -424,15 +417,16 @@
 
         /* Image Grayscale */
         .img-grayscale {
-            aspect-ratio: 4/5; background: var(--surface-container-high); border-radius: var(--radius-md);
+            aspect-ratio: 1/1; background: var(--surface-container-high); border-radius: 50%;
             box-shadow: var(--shadow-premium); overflow: hidden; position: relative;
+            width: 180px; max-width: 100%; margin: 1rem 0 2rem;
         }
-        .img-grayscale::after {
-            content: "\e853"; /* account_circle material icon */
-            font-family: 'Material Symbols Outlined';
-            position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-            font-size: 15rem; color: rgba(15, 15, 17, 0.1);
+        .img-grayscale img {
+            width: 100%; height: 100%; object-fit: cover; display: block;
+            filter: grayscale(100%) contrast(1.05);
+            transition: filter 0.4s ease;
         }
+        .img-grayscale:hover img { filter: grayscale(0%) contrast(1); }
 
         /* FAQ Details */
         details {
@@ -472,7 +466,7 @@
     <!-- 1. Nav -->
     <header role="banner" class="nav-bar">
         <nav aria-label="Navigation principale" class="nav-content">
-            <a href="https://envolia.fr" class="nav-logo" aria-label="Ventes-IA - Retour à l'accueil" style="font-family: var(--font-body); font-weight: 800; letter-spacing: -0.02em;">Ventes-IA</a>
+            <a href="/" class="nav-logo" aria-label="Ventes-IA - Retour à l'accueil" style="font-family: var(--font-body); font-weight: 800; letter-spacing: -0.02em;">Ventes-IA</a>
             <div class="nav-links">
                 <a href="#newsletter" class="nav-link">La newsletter</a>
                 <a href="#qui-ecrit" class="nav-link">Qui écrit</a>
@@ -497,11 +491,9 @@
                     Sans jargon, sans buzz, et sans déshumaniser la relation client.
                 </p>
                 <div id="sinscrire">
-                    <form action="#" method="post" class="form-inline">
-                        <label for="email-hero" class="sr-only">Votre email professionnel</label>
-                        <input type="email" id="email-hero" class="input-base" placeholder="Votre email professionnel" required autocomplete="email">
-                        <button type="submit" class="btn btn-large">Recevoir la prochaine édition</button>
-                    </form>
+                    <div style="display:flex; justify-content:center;">
+                        <button type="button" class="btn btn-large js-open-tally">Recevoir la prochaine édition</button>
+                    </div>
                     <p class="text-caption mt-6" style="margin-top: 1.5rem; opacity: 0.4;">Gratuit. Un email par semaine. Désinscription en un clic.</p>
                 </div>
             </div>
@@ -517,7 +509,7 @@
                 <div class="flex baseline gap-md mb-md stat-box">
                     <div class="text-huge color-primary font-display">75%</div>
                     <p class="text-h3" style="font-family: var(--font-body); font-weight: 700; max-width: 600px;">
-                        des employés de bureau utilisent l'<abbr title="Intelligence Artificielle">IA</abbr> au travail — la plupart avec leurs propres outils, hors de tout contrôle.
+                        des employés de bureau utilisent l'<abbr title="Intelligence Artificielle">IA</abbr> au travail. La plupart avec leurs propres outils, hors de tout contrôle.
                     </p>
                 </div>
                 
@@ -583,7 +575,7 @@
 
                 <div style="background: var(--primary); padding: 3rem; border-radius: var(--radius-sm); color: var(--navy);" class="flex items-center gap-md">
                     <span class="material-symbols-outlined" style="font-size: 2rem;" aria-hidden="true">arrow_forward</span>
-                    <p class="text-h4">Pour 1 € investi dans la technologie <abbr title="Intelligence Artificielle">IA</abbr>, il en faut 9 en accompagnement humain et en process. La plupart des entreprises font l'inverse — et cette newsletter existe pour vous éviter d'en faire partie.</p>
+                    <p class="text-h4">Pour 1 € investi dans la technologie <abbr title="Intelligence Artificielle">IA</abbr>, il en faut 9 en accompagnement humain et en process. La plupart des entreprises font l'inverse. Cette newsletter existe pour vous éviter d'en faire partie.</p>
                 </div>
                 <p class="source-link" style="margin-top: 2rem; border-color: rgba(255,255,255,0.2);">Sources : MIT Sloan Management Review, BCG 2024</p>
             </div>
@@ -606,7 +598,7 @@
                         <div class="icon-circle">
                             <span class="material-symbols-outlined text-h3" aria-hidden="true">rocket_launch</span>
                         </div>
-                        <span class="text-caption color-primary" style="margin-bottom: 1rem; display: block;">1 — Cas d'usage</span>
+                        <span class="text-caption color-primary" style="margin-bottom: 1rem; display: block;">1. Cas d'usage</span>
                         <h3 class="text-h3 mb-sm">Le cas d'usage de la semaine.</h3>
                         <p class="text-body-lg" style="font-size:1rem; margin-bottom: 2rem;">
                             Pas un article généraliste sur l'<abbr title="Intelligence Artificielle">IA</abbr>. Un cas d'usage commercial concret, applicable dès le lendemain matin sur vos propres comptes. Voici les premiers cas d'usage préparés pour les éditions de lancement :
@@ -626,7 +618,7 @@
                             </li>
                         </ul>
                         <p class="text-body-lg" style="font-size:0.875rem; font-style: italic; margin-top: 1.5rem; opacity: 0.7;">
-                            Chaque cas d'usage nomme l'outil utilisé, donne les étapes, et livre un résultat concret — pas une idée théorique.
+                            Chaque cas d'usage nomme l'outil utilisé, donne les étapes, et livre un résultat concret, pas une idée théorique.
                         </p>
                     </li>
 
@@ -635,7 +627,7 @@
                         <div class="icon-circle">
                             <span class="material-symbols-outlined text-h3" aria-hidden="true">newspaper</span>
                         </div>
-                        <span class="text-caption color-primary" style="margin-bottom: 1rem; display: block;">2 — Actus</span>
+                        <span class="text-caption color-primary" style="margin-bottom: 1rem; display: block;">2. Actus</span>
                         <h3 class="text-h3 mb-sm">L'actu Sales Tech.</h3>
                         <p class="text-body-lg" style="font-size:1rem;">
                             L'écosystème de la vente assistée par <abbr title="Intelligence Artificielle">IA</abbr> bouge chaque semaine. On décrypte ce que chaque annonce change concrètement pour un directeur commercial de <abbr title="Petites et Moyennes Entreprises">PME</abbr>, un manager d'équipe ou un commercial terrain.
@@ -647,7 +639,7 @@
                         <div class="icon-circle">
                             <span class="material-symbols-outlined text-h3" aria-hidden="true">build</span>
                         </div>
-                        <span class="text-caption color-primary" style="margin-bottom: 1rem; display: block;">3 — Outil</span>
+                        <span class="text-caption color-primary" style="margin-bottom: 1rem; display: block;">3. Outil</span>
                         <h3 class="text-h3 mb-sm">L'outil de la semaine.</h3>
                         <p class="text-body-lg" style="font-size:1rem;">
                             Un outil <abbr title="Intelligence Artificielle">IA</abbr> utile aux commerciaux. Décodé en deux temps : ce qu'il faut savoir, et pourquoi c'est important pour vos ventes.
@@ -664,15 +656,15 @@
                 
                 <div class="text-body-lg color-white" style="opacity: 0.8; margin-bottom: 4rem;">
                     <p style="margin-bottom: 1.5rem;">Parce qu'un cas d'usage <abbr title="Intelligence Artificielle">IA</abbr> pensé pour un service marketing, <abbr title="Ressources Humaines">RH</abbr> ou IT ne sert à rien à un commercial qui doit relancer 40 prospects, qualifier un compte clé ou conclure un cycle de six mois.</p>
-                    <p style="margin-bottom: 1.5rem;">Parce que l'<abbr title="Intelligence Artificielle">IA</abbr> ne va pas remplacer vos commerciaux. Elle va les rendre plus efficaces — à condition qu'ils ne s'en servent pas pour automatiser des relances impersonnelles qui détruisent votre image de marque en deux trimestres.</p>
+                    <p style="margin-bottom: 1.5rem;">Parce que l'<abbr title="Intelligence Artificielle">IA</abbr> ne va pas remplacer vos commerciaux. Elle va les rendre plus efficaces, à condition qu'ils ne s'en servent pas pour automatiser des relances impersonnelles qui détruisent votre image de marque en deux trimestres.</p>
                     <p>Parce que 15 ans en vente <abbr title="Business to Business">B2B</abbr> m'ont appris une chose : aucun outil ne corrige un processus mal structuré. C'est pour ça que cette newsletter parle de méthode avant de parler d'outils, et d'humain avant de parler de machine.</p>
                 </div>
 
                 <div style="background: rgba(249,165,0,0.05); border: 2px solid rgba(249,165,0,0.3); padding: 3rem; border-radius: var(--radius-sm);">
                     <p class="text-h2 color-primary">
-                        D'abord l'humain,<br>
+                        "D'abord l'humain,<br>
                         ensuite le process,<br>
-                        ensuite l'outil.
+                        ensuite l'outil."
                     </p>
                 </div>
             </div>
@@ -684,11 +676,9 @@
                 <div style="background: var(--navy); padding: 4rem 3rem; border-radius: var(--radius-md); box-shadow: var(--shadow-premium);">
                     <h2 id="cta-mid-title" class="text-h2 color-white mb-sm">Le prochain numéro part mardi prochain.</h2>
                     <p class="text-body-lg" style="color: rgba(255,255,255,0.7); margin-bottom: 2rem;">Rejoignez-le.</p>
-                    <form action="#" method="post" class="form-inline" style="margin-bottom: 1.5rem;">
-                        <label for="email-mid" class="sr-only">Votre email professionnel</label>
-                        <input type="email" id="email-mid" class="input-base" placeholder="Votre email professionnel" required autocomplete="email">
-                        <button type="submit" class="btn btn-large">Je m'abonne</button>
-                    </form>
+                    <div style="margin-bottom: 1.5rem;">
+                        <button type="button" class="btn btn-large js-open-tally">Je m'abonne</button>
+                    </div>
                     <p class="text-caption" style="color: rgba(255,255,255,0.4);">Gratuit. Un email par semaine. Désinscription en un clic.</p>
                 </div>
             </div>
@@ -700,7 +690,7 @@
                 <div class="grid-2 gap-lg" style="align-items: start;">
                     <div style="position: sticky; top: 8rem;">
                         <h2 id="author-title" class="text-h2 mb-md">Qui écrit cette newsletter ?</h2>
-                        <div class="img-grayscale"></div>
+                        <div class="img-grayscale"><img src="amelie-marrone.jpg" alt="Portrait d'Amélie Marrone, fondatrice de Ventes-IA" width="600" height="750" loading="lazy" decoding="async"></div>
                     </div>
                     <div>
                         <div class="mb-md">
@@ -708,14 +698,14 @@
                             <p class="text-caption color-primary">Consultante & formatrice IA</p>
                         </div>
                         <div class="text-body-lg" style="margin-bottom: 3rem;">
-                            <p style="margin-bottom: 1.5rem;">Après 15 ans à faire adopter des outils à des équipes commerciales, j'ai voulu mettre cette expérience au service des entreprises qui veulent réussir leur intégration <abbr title="Intelligence Artificielle">IA</abbr> — pas juste l'acheter.</p>
-                            <p style="margin-bottom: 1.5rem;">J'ai co-développé <span style="color:var(--charcoal); font-weight:900; border-bottom: 2px solid var(--primary-glow)">PhonePlus <abbr title="Customer Relationship Management">CRM</abbr></span> en observant les meilleurs commerciaux de mes clients. On a intégré leur process dans l'outil. Résultat : <span style="color:var(--charcoal); font-weight:900;">+30 % de conversion</span> — pas parce que l'outil est magique, mais parce que le process est bon, et que les équipes l'ont adopté.</p>
+                            <p style="margin-bottom: 1.5rem;">Je ne me suis pas lancée dans l'IA parce que c'est à la mode. Mais parce que j'ai vu arriver le même problème que j'ai résolu pendant 15 ans : comment faire qu'un outil soit réellement adopté et rentable. Aujourd'hui je mets cette expérience au service des entreprises pour leur éviter les pièges qui empêchent l'<abbr title="Intelligence Artificielle">IA</abbr> de produire de vrais résultats.</p>
+                            <p style="margin-bottom: 1.5rem;">J'ai co-conçu <a href="https://www.alpesinnovation.fr/" target="_blank" rel="noopener" style="color:var(--charcoal); font-weight:900; border-bottom: 2px solid var(--primary-glow); text-decoration: none;">PhonePlus <abbr title="Customer Relationship Management">CRM</abbr></a> en observant les meilleurs commerciaux de mes clients. On a intégré leur process dans l'outil. Résultat : <span style="color:var(--charcoal); font-weight:900;">+30 % de conversion</span>, pas parce que l'outil est magique, mais parce que le process est bon, et que les équipes l'ont adopté.</p>
                             <p>Aujourd'hui, je fais la même chose avec l'<abbr title="Intelligence Artificielle">IA</abbr>. Et cette newsletter, c'est ma façon de partager chaque semaine ce que j'apprends sur le terrain.</p>
                         </div>
                         <div style="padding-top: 2rem; border-top: 1px solid var(--outline);">
                             <p class="text-h4 mb-md">Experte en vente, formée à l'<abbr title="Intelligence Artificielle">IA</abbr>. Pas l'inverse.</p>
                             <p class="text-caption" style="font-size: 0.6875rem; opacity: 0.5; letter-spacing: 0.15em; margin-bottom: 2rem; line-height: 1.8;">
-                                Consultante en prospection <abbr title="Business to Business">B2B</abbr> · 15 ans · Co-développeuse de PhonePlus <abbr title="Customer Relationship Management">CRM</abbr> · 50+ <abbr title="Petites et Moyennes Entreprises">PME</abbr> accompagnées · Animatrice du Casse-Tête de l'<abbr title="Intelligence Artificielle">IA</abbr> Générative
+                                Consultante en prospection <abbr title="Business to Business">B2B</abbr> · 15 ans · Co-conceptrice de <a href="https://www.alpesinnovation.fr/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">PhonePlus <abbr title="Customer Relationship Management">CRM</abbr></a> · utilisé par +1000 commerciaux au quotidien · 50+ <abbr title="Petites et Moyennes Entreprises">PME</abbr> accompagnées · Animatrice du <a href="https://casse-tete.org/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">Casse-Tête de l'<abbr title="Intelligence Artificielle">IA</abbr> Générative</a>
                             </p>
                             <a href="https://envolia.fr" target="_blank" rel="noopener" class="btn btn-large" style="background:var(--navy); color:var(--white);">
                                 Découvrir envolia.fr
@@ -761,11 +751,9 @@
                     5 minutes par semaine pour <i>ne plus jamais</i> subir l'<abbr title="Intelligence Artificielle">IA</abbr> dans vos ventes.
                 </h2>
                 <div style="background: var(--navy); padding: 3rem; border-radius: var(--radius-md); box-shadow: var(--shadow-premium);">
-                    <form action="#" method="post" class="form-inline" style="margin-bottom: 2rem;">
-                        <label for="email-final" class="sr-only">Votre email professionnel</label>
-                        <input type="email" id="email-final" class="input-base" placeholder="Votre email professionnel" required autocomplete="email">
-                        <button type="submit" class="btn btn-large">Recevoir la prochaine édition</button>
-                    </form>
+                    <div style="margin-bottom: 2rem;">
+                        <button type="button" class="btn btn-large js-open-tally">Recevoir la prochaine édition</button>
+                    </div>
                     <p class="text-caption" style="color: rgba(255,255,255,0.4);">Gratuit. Un email par semaine. Désinscription en un clic.</p>
                 </div>
             </div>
@@ -778,24 +766,48 @@
             <div class="grid-2 align-items" style="align-items: center;">
                 <div>
                     <p class="text-h3 color-white mb-sm" style="font-family: var(--font-body); font-weight: 800; letter-spacing: -0.02em;">Ventes-IA</p>
-                    <p class="text-caption mb-sm" style="color: rgba(255,255,255,0.6);">Une publication d'envolia.fr</p>
+                    <p class="text-caption mb-sm" style="color: rgba(255,255,255,0.6);">La newsletter pour mieux vendre avec l'IA, sans perdre l'humain.</p>
                     <p class="text-caption" style="font-size: 0.625rem; font-weight: 500; max-width: 400px; line-height: 1.8;">
                         Amélie Marrone · Lyon · Grenoble · Annecy · Chambéry · Distanciel France
                     </p>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 2rem;">
                     <div class="flex gap-md text-caption" style="font-size: 0.6875rem;">
-                        <a href="https://envolia.fr" class="footer-a">envolia.fr</a>
                         <a href="https://linkedin.com/in/ameliemarrone" target="_blank" rel="noopener" class="footer-a">LinkedIn</a>
                     </div>
                     <div class="flex gap-md text-caption" style="font-size: 0.6875rem; opacity: 0.3;">
-                        <a href="#" class="footer-a">Mentions légales</a>
-                        <a href="#" class="footer-a">Confidentialité</a>
+                        <a href="/mentions-legales" class="footer-a">Mentions légales</a>
+                        <a href="/politique-de-confidentialite" class="footer-a">Confidentialité</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Tally popup integration -->
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <script>
+      (function () {
+        var TALLY_ID = 'q4KLL8';
+        function openTally() {
+          if (window.Tally && typeof window.Tally.openPopup === 'function') {
+            window.Tally.openPopup(TALLY_ID, {
+              layout: 'modal',
+              width: 520,
+              hideTitle: false,
+              autoClose: 2000
+            });
+          } else {
+            window.open('https://tally.so/r/' + TALLY_ID, '_blank', 'noopener');
+          }
+        }
+        document.querySelectorAll('.js-open-tally').forEach(function (btn) {
+          btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            openTally();
+          });
+        });
+      })();
+    </script>
 </body>
 </html>
